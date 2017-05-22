@@ -1,0 +1,31 @@
+{
+  "name": "fd-design",
+  "version": "1.0.0",
+  "description": "Child Theme for the _tk Wordpress Theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvail/fd-design.git"
+  },
+  "keywords": [
+    "wordpress-theme",
+    "wordpress-child-theme",
+    "bootstrap-wordpress-theme",
+    "bootstrap",
+    "bootstrap3-theme",
+    "responsive",
+    "mobile-first"
+  ],
+  "author": "Vincent Vaillancourt",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vvail/fd-design/issues"
+  },
+  "homepage": "https://github.com/vvail/fd-design#readme",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

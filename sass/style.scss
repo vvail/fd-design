@@ -1,0 +1,90 @@
+@import "theme_variables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "overlay";
+
+div.logo {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 100;
+
+	@media (max-width: $screen-xs-max) {
+		img {
+			height: 215px;
+			width: auto;
+		}
+	}
+}
+
+/*
+ * Make room for our logo
+ */
+.main-content {
+	padding-top: 10px;
+}
+
+/*
+ * Remove the float in the navbar preventing us from properly aligning the menu
+ * items to the left and to the right.
+ */
+@media (min-width: $screen-xs-min) {
+	.navbar-nav {
+		float: none;
+	}
+}
+
+.navbar {
+	border-radius: $navbar-border-radius;
+}
+
+.collapse.in {
+	position: relative;
+	z-index: 500;
+}
+
+.navbar-primary {
+	background-color: $brand-primary;
+
+	a {
+		color: black;
+		font-size: $font-size-large;
+
+		&:hover {
+			color: black;
+			border-radius: 4px;
+		}
+	}
+
+	.navbar-toggle {
+		border-color: $navbar-default-toggle-border-color;
+		&:hover,
+    	&:focus {
+      	background-color: $navbar-default-toggle-hover-bg;
+    	}
+		.icon-bar {
+			background-color: $navbar-default-toggle-icon-bar-bg;
+		}
+	}
+}
+
+header#masthead {
+	.container {
+		padding-bottom: 0;
+	}
+}
+
+/*
+ * Override bootstrap-wp.css
+ */
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+	color: #ffffff;
+	text-decoration: none;
+	background-color: darken($brand-primary, 3%);
+	background-image: -webkit-gradient(linear, left 0%, left 100%, from($brand-primary), to(darken($brand-primary, 3%)));
+	background-image: -webkit-linear-gradient(top, $brand-primary, 0%, darken($brand-primary, 3%), 100%);
+	background-image: -moz-linear-gradient(top, $brand-primary 0%, darken($brand-primary, 3%) 100%);
+	background-image: linear-gradient(to bottom, $brand-primary 0%, darken($brand-primary, 3%) 100%);
+	background-repeat: repeat-x;
+}
